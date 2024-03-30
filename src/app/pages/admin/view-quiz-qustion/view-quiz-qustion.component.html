@@ -1,0 +1,38 @@
+<h1 class="ml20"> Adding Questions  {{qTitle}}</h1>
+
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contaniner text-center" routerLink="/admin-dashboard/add-question/{{qid}}/ {{qTitle}}"> <button mat-raised-button color="primary">Add Question</button></div>
+            <mat-card *ngFor="let q of question; let i=index" class="mt20">
+                <mat-card-content>
+                    
+                        <p>
+                      <b> Q{{i+1}}).</b>
+                       <span  [innerHTML]="q.content">{{q.content}}</span>
+                    </p>
+                    <div class="contaniner-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><b>a)</b>{{q.option1}}</p>
+                                <p><b>c)</b>{{q.option3}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><b>b)</b>{{q.option2}}</p>
+                                <p><b>d)</b>{{q.option4}}</p>
+                            </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <p class="mt20"><b>Correct Answer:</b>{{q.answer}}</p>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button  color="warn" (click)="deletequestion(q.quesId)">Delete</button>
+                    <button mat-flat-button class="ml20" color="primary">Update</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

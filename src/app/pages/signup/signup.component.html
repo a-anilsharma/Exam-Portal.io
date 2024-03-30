@@ -1,0 +1,66 @@
+<div class="bootstrap-wrapper">
+
+<div class="container">
+
+    <div class="row" style="margin:20px;">
+        <div class="col-md-6 offset-md-3 text-center" style="background-color:ghostwhite">
+
+       
+            <div class="container">
+
+              <img src="../../../assets/logo.png" alt="" width="150px">
+
+            </div>
+                 <h1>Register Here!!</h1>
+
+            <form (ngSubmit)="formSubmit()">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Username</mat-label>
+                <input [(ngModel)]="user.username" matInput  placeholder="Placeholder"  name="username">
+                <mat-hint >Hint:Username must be unique i.e. anil1998,amit9193sharma</mat-hint>
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="user.password" name="password">
+              
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="user.firstname" name="firstname">
+              
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="user.lastname" name="lastname">
+              
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="user.email" name="email">
+              
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Phone No.</mat-label>
+                <input matInput placeholder="Placeholder" [(ngModel)]="user.phoneno" name="phoneno">
+              
+              </mat-form-field>
+              
+              <button type="submit" mat-raised-button color="primary" style="margin-right: 20px;" >Submit</button>
+              
+              <button mat-raised-button color="accent"  onclick="reset()">Reset</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+</div>

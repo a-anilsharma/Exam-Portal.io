@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>rocket_launch</mat-icon>
+    </button>
+    <span>Exam Portal</span>
+    <span class="example-spacer"></span>
+
+    <a *ngIf="!isLoggedIn" href="/login" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+      <!--<mat-icon>login</mat-icon> -->
+      Login
+    </a>
+
+    <a *ngIf="!isLoggedIn" href="/signup" mat-icon-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with share icon" style="margin-right:5% ;">
+      <!--<mat-icon>share</mat-icon> -->
+      Sign Up
+    </a>
+    
+    <a *ngIf="isLoggedIn" href="/signup" mat-icon-button class="example-icon favorite-icon mr20  ml20" aria-label="Example icon-button with share icon" style="margin-right:20% ;">
+      <!--<mat-icon>share</mat-icon> -->Welcome!!
+      {{login.getUser().firstname+'  '+login.getUser().lastname}}
+    </a> 
+
+
+    <a (click)="logout()" *ngIf="isLoggedIn" href="#" mat-icon-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with share icon" style="margin-right:5% ;">
+      <!--<mat-icon>share</mat-icon> -->
+      Logout
+    </a>
+  </mat-toolbar>
+  

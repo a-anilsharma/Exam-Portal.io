@@ -1,0 +1,18 @@
+.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+.example-header-image {
+    background-image: url('../../../../assets/score.png');
+    background-size: cover;
+  }
+
+.mt20{
+  margin-top: 20px;
+}
+ 
+.mt10{
+  margin-top: 10px;
+}

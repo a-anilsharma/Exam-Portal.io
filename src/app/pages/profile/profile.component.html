@@ -1,0 +1,42 @@
+  <mat-card>
+  <h1 style="margin: 20px;">Your Profile Details</h1>
+  <mat-card-content>
+
+  <div class="bootstrap-wrapper">
+  <div class="container">
+  <div class="container text-center " >
+
+      <img src="../../../assets/defult-user-img.jpg" alt="" class="profile-img">
+      <h1 class="mt-20" >{{user.firstname}} {{user.lastname}}</h1>
+  </div>
+
+  <div class="row">
+  <div class="col-md-10 offset-md-1">
+      <table  class="table text-center">
+
+        
+          <tr><td>Username</td> <td>{{user.username}}</td></tr>
+          <tr><td>UserId</td> <td>Exam{{user.id}}</td></tr>
+          <tr *ngIf="user.phoneno"><td>Phone</td> <td>{{user.phoneno}}</td></tr>
+          <tr><td>Email</td> <td>{{user.email}}</td></tr>
+          <tr><td>Role</td> <td>{{user.authorities[0].authority}}</td></tr>
+          <tr><td>Status</td> <td>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</td></tr>
+          
+        </table>
+  </div>
+
+
+  </div>
+
+  </div>
+
+
+  </div>
+
+
+  </mat-card-content>
+  <mat-card-actions  style="padding-left: 450px;">
+      <button mat-raised-button color="primary" style="margin-right: 15px;">Update</button>
+      <button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
