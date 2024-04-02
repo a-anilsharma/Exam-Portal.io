@@ -52,10 +52,21 @@ phoneno:'',
      // alert("Submited");
      Swal.fire({
       title: 'Success!!',
-      text: 'Hello '+data.firstname+''+data.lastname+'! You has been registered succussfully!! ',
+      text: 'Hello '+data.firstname+' '+data.lastname+'! You has been registered succussfully!! ',
       icon: 'success',
       confirmButtonText: 'OK'
-    })
+    });
+   this.user= {
+      username:'',
+      password:'',
+      firstname:'',
+      lastname:'',
+      email:'',
+      phoneno:'',
+      
+      
+      };
+   // window.location.href='/login';
 
     },(error)=>{
 
