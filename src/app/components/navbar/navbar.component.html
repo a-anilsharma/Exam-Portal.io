@@ -5,17 +5,17 @@
     <span>Exam Portal</span>
     <span class="example-spacer"></span>
 
-    <a *ngIf="!isLoggedIn" href="/login" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+    <a *ngIf="!isLoggedIn" routerLink ="/login" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
       <!--<mat-icon>login</mat-icon> -->
       Login
     </a>
 
-    <a *ngIf="!isLoggedIn" href="/signup" mat-icon-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with share icon" style="margin-right:5% ;">
+    <a *ngIf="!isLoggedIn" routerLink="/signup" mat-icon-button class="example-icon favorite-icon  ml20" aria-label="Example icon-button with share icon" style="margin-right:5% ;">
       <!--<mat-icon>share</mat-icon> -->
       Sign Up
     </a>
     
-    <a *ngIf="isLoggedIn" href="/signup" mat-icon-button class="example-icon favorite-icon mr20  ml20" aria-label="Example icon-button with share icon" style="margin-right:20% ;">
+    <a *ngIf="isLoggedIn" routerLink="/signup" mat-icon-button class="example-icon favorite-icon mr20  ml20" aria-label="Example icon-button with share icon" style="margin-right:20% ;">
       <!--<mat-icon>share</mat-icon> -->Welcome!!
       {{login.getUser().firstname+'  '+login.getUser().lastname}}
     </a> 
